@@ -59,7 +59,7 @@ export const createPineconeIndex = async (
 
 
 // now that the index is created . Uplaod the data to the index
-export const UpdatePinecone = async (client,indexName,docs)=>{
+export const updatePinecone = async (client,indexName,docs)=>{
 
     // Retrieve The Pinecone index
     const index = client.Index(indexName);
