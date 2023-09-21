@@ -22,9 +22,12 @@ export async function POST(req:NextRequest){
         environment : process.env.PINECONE_ENVIRONMENT || ''
     })
 
+    const text = await queryPineconeVectorStoreandQueryLLM(client,indexName,bosy)
+    return NextResponse.json({
+        data:text,
+    })
 
-
-
-
-    
 }
+
+// try catch block
+
